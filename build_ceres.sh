@@ -11,5 +11,4 @@ mkdir build
 cd build
 cmake ..
 make -j8
-mkdir -p $ROOT_PATH/lib/utils/extend_utils/lib
-mv $ROOT_PATH/ceres/ceres-solver-1.14.0/build/lib/libceres* $ROOT_PATH/lib/utils/extend_utils/lib
+make install
