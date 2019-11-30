@@ -1,11 +1,11 @@
 import os
 
-ceres_include='./include'          # contains Ceres/ceres.h
-ceres_library='./lib/libceres.so'
-eigen_include='./include/eigen3'                     # contains Eigen/Core
-glog_library='./lib/libglog.so'
-cuda_include='/usr/local/cuda-9.2/include'
-cudart = '/usr/local/cuda-9.2/lib64/libcudart.so'
+ceres_include='/usr/local/include'          # contains Ceres/ceres.h
+ceres_library='/usr/local/lib/libceres.so'
+eigen_include='/usr/local/include/eigen3'                     # contains Eigen/Core
+glog_library='/usr/local/lib/libglog.so'
+cuda_include='/usr/local/cuda-10.2/include'
+cudart = '/usr/local/cuda-10.2/lib64/libcudart.so'
 
 os.system('gcc -shared src/mesh_rasterization.cpp -c -o src/mesh_rasterization.cpp.o -fopenmp -fPIC -O2 -std=c++11')
 os.system('gcc -shared src/farthest_point_sampling.cpp -c -o src/farthest_point_sampling.cpp.o -fopenmp -fPIC -O2 -std=c++11')
